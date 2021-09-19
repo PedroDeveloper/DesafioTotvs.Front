@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+
+  .logo {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .filter-container {
+    height: 20vh;
+    position: relative;
+    background: blue;
+    clip-path: ellipse(120% 100% at 69.6% 0%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .filter-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+
+      .icon-glass {
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: orange;
+        padding: 0.25rem;
+
+        transform: translateX(-10px);
+
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+
+        @media (min-width: 1366px) {
+          padding: 0.65rem;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  min-height: 70vh;
+
+  @media (min-width: 1024px) {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .search-title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+.no-items-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 50vh;
+
+  .text {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .no-items-found-svg {
+    width: 90px;
+    height: 90px;
+  }
+}

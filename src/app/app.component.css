@@ -1,0 +1,8 @@
+.po-modal-footer {
+  display: none;
+  background: red;
+}
+
+.po-modal {
+  background: red !important;
+}

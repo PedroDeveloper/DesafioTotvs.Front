@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card card-title row">
+    <span>Repositorio: {{ repository?.name }}</span>
+    <div (click)="toggleDetailsInfo()" class="cta">
+      <span> {{ showDetails ? "Ocultar Detalhes" : "Ver Detalhes" }}</span>
+      <span
+        class="po-icon"
+        [ngClass]="showDetails ? 'po-icon-arrow-up' : ' po-icon-arrow-down'"
+      ></span>
+    </div>
+  </div>
+
+  <div class="details row" *ngIf="showDetails" [@inOutAnimation]>
+    <span>Linguagem: {{ repository.language ?? "Não Definida" }}</span>
+    <po-button
+      p-label="Ver mais"
+      p-type="primary"
+      (click)="handleOpenModal()"
+    ></po-button>
+  </div>
+</div>
